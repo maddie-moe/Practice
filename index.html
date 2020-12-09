@@ -11,6 +11,7 @@
 
 <body>
     <nav>
+        <!--I know you're not supposed to set image size/width in HTML, but I did for this practice page b/c the images were huge, and made previewing the page in the browser difficult.-->
         <a href="https://www.airbnb.com/" target="_blank"><img
                 src="https://github.com/maddie-moe/Practice/blob/master/Logo_Airbnb.png?raw=true" alt="Airbnb logo"
                 width="30" /></a>
@@ -23,15 +24,16 @@
     </nav>
     <br>
     <header>
-        <img src="https://github.com/maddie-moe/Practice/blob/master/Header-image_Airbnb.jpg?raw=true"
+        <img src="https://github.com/maddie-moe/Practice/blob/master/IMG/Header-image_Airbnb.jpg?raw=true"
             alt="A two story tree house made of wood" width="800">
+        <!--Form does not submit anywhere. Not sure how to designate where info is sent.-->
         <form action="submission.html" method="POST">
             <section>
                 <h2>Earn up to $2,548 a month hosting in Phoenix</h2>
                 <aside onclick="togglePopup()"><u>How we estimate your earnings potential</u></aside>
-                <!--The following div is the only popup I created for this page. Not sure how to appropriately/semantically
-                    integrate popup copy into the structure of the doc, without hindering the readability of the code.-->
-                    <div class="popup" id="popup-1">
+                <!--The following div is the only popup I created for this page. Not sure how to properly
+                    integrate popup copy into the doc, without hindering the readability of the code.-->
+                <div class="popup" id="popup-1">
                     <div class="overlay"></div>
                     <div class="content">
                         <div class="close-btn" onclick="togglePopup()">&times;</div>
@@ -81,7 +83,7 @@
                 </select>
                 <br>
                 <label for="property-type">Property Type</label>
-                <select name="property-type" id="property-type">
+                <select name="property-type" id="property-type" required>
                     <option value="apartment">Apartment</option>
                     <option value="bed and breakfast">Bed and breakfast</option>
                     <option value="boutique hotel">Boutique hotel</option>
@@ -91,7 +93,7 @@
                 </select>
                 <br>
                 <label for="bedrooms">Bedrooms</label>
-                <select name="bedrooms" id="bedrooms">
+                <select name="bedrooms" id="bedrooms" required>
                     <option value="1">1 bedroom</option>
                     <option value="2">2 bedrooms</option>
                     <option value="3">3 bedrooms</option>
@@ -110,7 +112,7 @@
                 </select>
                 <br>
                 <label for="bathrooms">Bathrooms</label>
-                <select name="bathrooms" id="bathrooms">
+                <select name="bathrooms" id="bathrooms" required>
                     <option value="1">1 bathroom</option>
                     <option value="2">2 bathrooms</option>
                     <option value="3">3 bathrooms</option>
@@ -166,7 +168,7 @@
             </p>
             <blockquote>
                 <img src="https://github.com/maddie-moe/Practice/blob/master/Dennis-quote_Airbnb.jpg?raw=true"
-                    alt="Dennis sitting on couch in green shirt" width="800">
+                    alt="Dennis wearing a green shirt, sitting on a couch" width="800">
                 <h4>"The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's
                     damage or problems."</h4>
                 <p>Dennis hosts in London for the flexibility it provides</p>
@@ -231,6 +233,7 @@
         <section>
             <h1>Frequently asked questions</h1>
             <ul>
+                <!--All pop-ups. Want to review integration of first pop-up before using others.-->
                 <li>Who can be an Airbnb host?</li>
                 <li>What is required of guests before booking?</li>
                 <li>How much does it cost to list my space?</li>
@@ -240,15 +243,15 @@
             </ul>
             <table>
                 <tr>
-                    <th>
-                        <h3>More about hosting</h3>
-                    </th>
+                    <th>More about hosting</th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>
                         <figure>
                             <img src="https://github.com/maddie-moe/Practice/blob/master/More-about-hosting-Setup_Airbnb.jpg?raw=true"
-                                alt="" width="265">
+                                alt="two men shake hands outside of a home, and a woman stands nearby" width="265">
                             <figcaption>
                                 <h5>Setup</h5>
                                 How to start hosting<br>
@@ -259,7 +262,7 @@
                     <td>
                         <figure>
                             <img src="https://github.com/maddie-moe/Practice/blob/master/More-about-hosting-Safety_Airbnb.jpg?raw=true"
-                                alt="" width="265">
+                                alt="man, woman, and child sit happily on a couch with their dog" width="265">
                             <figcaption>
                                 <h5>Safety</h5>
                                 How Airbnb protects hosts<br>
@@ -270,7 +273,7 @@
                     <td>
                         <figure>
                             <img src="https://github.com/maddie-moe/Practice/blob/master/More-about-hosting-Financials_Airbnb.jpg?raw=true"
-                                alt="" width="265">
+                                alt="woman in yellow blazer sits on chair, smiling at camera" width="265">
                             <figcaption>
                                 <h5>Financials</h5>
                                 How you make money on Airbnb<br>
@@ -288,18 +291,10 @@
     <footer>
         <table>
             <tr>
-                <th scope="col">
-                    <h5>ABOUT</h5>
-                </th>
-                <th scope="col">
-                    <h5>COMMUNITY</h5>
-                </th>
-                <th scope="col">
-                    <h5>HOST</h5>
-                </th>
-                <th scope="col">
-                    <h5>SUPPORT</h5>
-                </th>
+                <th scope="col">ABOUT</th>
+                <th scope="col">COMMUNITY</th>
+                <th scope="col">HOST</th>
+                <th scope="col">SUPPORT</th>
             </tr>
             <tr>
                 <td><a href="https://www.airbnb.com/d/howairbnbworks" target="_blank">How Airbnb works</a></td>
