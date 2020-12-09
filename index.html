@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent out your house, apartment, or room on Airbnb</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="togglePopup.js"></script>
 </head>
 
 <body>
     <nav>
+        <a href="https://www.airbnb.com/" target="_blank"><img
+                src="https://github.com/maddie-moe/Practice/blob/master/Logo_Airbnb.png?raw=true" alt="Airbnb logo"
+                width="30" /></a>
         <a href="https://www.airbnb.com/host/homes">Overview</a>
         <a href="https://www.airbnb.com/d/setup">Setup</a>
         <a href="https://www.airbnb.com/d/safety">Safety</a>
@@ -22,14 +27,36 @@
             alt="A two story tree house made of wood" width="800">
         <form action="submission.html" method="POST">
             <section>
-                <h1>Earn up to $2,303 a month hosting in Phoenix</h1>
-                <aside><u>How we estimate your earnings potential</u></aside>
+                <h2>Earn up to $2,548 a month hosting in Phoenix</h2>
+                <aside onclick="togglePopup()"><u>How we estimate your earnings potential</u></aside>
+                <!--The following div is the only popup I created for this page. Not sure how to appropriately/semantically
+                    integrate popup copy into the structure of the doc, without hindering the readability of the code.-->
+                    <div class="popup" id="popup-1">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="close-btn" onclick="togglePopup()">&times;</div>
+                        <h3>How we estimate your earning potential</h3>
+                        <p>The default earnings estimates we display are for entire home listings with a guest capacity
+                            of four. Estimates are based on booking data from the last two years for your area and are
+                            calculated by multiplying a nightly price by days of occupancy (occupancy rate). The nightly
+                            prices used are based on average prices (before expenses, fees and taxes). The occupancy
+                            rates used to calculate monthly and annual estimates are based on the top 50% of listings as
+                            measured by how often they are booked. The top half of listings is used to illustrate the
+                            earning potential for engaged hosts. For the monthly and annual estimates only listings with
+                            sufficient availability are considered. Weekly estimates use 7 nights of occupancy. Where
+                            you provide information about your potential listing, the estimate we provide reflects that
+                            information. Amounts are estimates and not guaranteed. How much you actually make will
+                            depend on your availability, price, listing characteristics and amenities, acceptance and
+                            cancellation rates, guest reviews, applicable legal restrictions, demand in your area, and
+                            other factors.</p>
+                    </div>
+                </div>
                 <p>Tell us more about your place and we'll update your estimate</p>
             </section>
             <section>
                 <input type="text" name="address" placeholder="Address" required>
                 <br>
-                <select name="type of place" required>
+                <select name="type-of-place" required>
                     <option value="entire place" selected>Entire place</option>
                     <option value="private room">Private room</option>
                     <option value="shared room">Shared room</option>
@@ -53,8 +80,8 @@
                     <option value="15">15 guests</option>
                 </select>
                 <br>
-                <label for="property type">Property Type</label>
-                <select name="property type" id="property type">
+                <label for="property-type">Property Type</label>
+                <select name="property-type" id="property-type">
                     <option value="apartment">Apartment</option>
                     <option value="bed and breakfast">Bed and breakfast</option>
                     <option value="boutique hotel">Boutique hotel</option>
@@ -105,8 +132,8 @@
                 <p>Let us know if your place includes any special amenities that are popular with guests</p>
                 <input id="gym" name="amenity" type="checkbox" value="gym">
                 <label for="gym">Gym</label>
-                <input id="hot tub" name="amenity" type="checkbox" value="hot tub">
-                <label for="hot tub">Hot tub</label>
+                <input id="hot-tub" name="amenity" type="checkbox" value="hot-tub">
+                <label for="hot-tub">Hot tub</label>
                 <input id="pool" name="amenity" type="checkbox" value="pool">
                 <label for="pool">Pool</label>
                 <input id="waterfront" name="amenity" type="checkbox" value="waterfront">
@@ -119,33 +146,32 @@
         </form>
     </header>
     <main>
-        <h2>Why host on Airbnb?</h2>
+        <h3>Why host on Airbnb?</h3>
         <p>No matter what kind of home or room you have to share, Airbnb makes it simple and secure to host travelers.
             You’re in full control of your availability, prices, house rules, and how you interact with guests.</p>
-        <h2>We have your back</h2>
+        <h3>We have your back</h3>
         <p>To keep you, your home, and your belongings safe, we cover every booking with $1M USD in property damage
             protection and another $1M USD in insurance against accidents.</p>
         <hr>
         <section>
             <h1>Hosting in 3 steps</h1>
-            <h2>List your space for free</h2>
+            <h3>List your space for free</h3>
             <p>Share any space without sign-up charges, from a shared living room to a second home and everything
                 in-between.</p>
-            <h2>Decide how you want to host</h2>
+            <h3>Decide how you want to host</h3>
             <p>Choose your own schedule, prices, and requirements for guests. We're there to help along the way.</p>
-            <h2>Welcome your first guest</h2>
+            <h3>Welcome your first guest</h3>
             <p>Once your listing is live, qualified guests can reach out. You can message them with any questions before
                 their stay. <br> <a href="https://www.airbnb.com/d/setup" target="_blank">Learn how to start hosting</a>
             </p>
             <blockquote>
-                <h2>"The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's
-                    damage or problems."</h2>
+                <img src="https://github.com/maddie-moe/Practice/blob/master/Dennis-quote_Airbnb.jpg?raw=true"
+                    alt="Dennis sitting on couch in green shirt" width="800">
+                <h4>"The Host Guarantee helped me decide to join Airbnb because I have it to fall back on if there's
+                    damage or problems."</h4>
                 <p>Dennis hosts in London for the flexibility it provides</p>
                 <a href="https://www.airbnb.com/d/host_testimonial_dennis" target="_blank"><button>Learn how they
                         host</button></a>
-                <br>
-                <img src="https://github.com/maddie-moe/Practice/blob/master/Dennis-quote_Airbnb.jpg?raw=true"
-                    alt="Dennis sitting on couch in green shirt" width="800">
             </blockquote>
         </section>
         <hr>
@@ -172,18 +198,18 @@
         <hr>
         <section>
             <h1>Payments made simple</h1>
-            <h2>Charge what you want</h2>
+            <h3>Charge what you want</h3>
             <p>You always get to pick your price. Need help? We have tools to help you match demand in your area.</p>
-            <h2>Pay low fees</h2>
+            <h3>Pay low fees</h3>
             <p>There’s no cost to sign up. Airbnb generally charges hosts a flat 3% per reservation, among the lowest
                 fees in the industry.</p>
-            <h2>Get paid quickly</h2>
+            <h3>Get paid quickly</h3>
             <p>Once a guest checks in, we can send your money by Paypal, direct deposit, or other available methods.<br>
                 <a href="https://www.airbnb.com/d/financials" target="_blank">Learn how to make money on Airbnb</a></p>
             <blockquote>
                 <img src="https://github.com/maddie-moe/Practice/blob/master/Tessa-quote_Airbnb.jpg?raw=true"
                     alt="Tessa wearing a red cardigan standing in a home kitchen" width="800">
-                <h2>"Hosting has helped me pay for a new kitchen and other upgrades."</h2>
+                <h4>"Hosting has helped me pay for a new kitchen and other upgrades."</h4>
                 <p>Tessa hosts in London to earn extra money</p>
                 <a href="https://www.airbnb.com/d/host_testimonial_tessa" target="_blank"><button>Learn how they
                         host</button></a>
@@ -192,10 +218,10 @@
         <hr>
         <section>
             <h1>About Airbnb</h1>
-            <h2>What is Airbnb?</h2>
+            <h3>What is Airbnb?</h3>
             <p>Airbnb connects people with places to stay and things to do around the world. The community is powered by
                 hosts, who provide their guests with the unique opportunity to travel like a local.</p>
-            <h2>What is hosting?</h2>
+            <h3>What is hosting?</h3>
             <p>If you have an extra room, entire home, or expertise, you can earn money by sharing it with anyone in the
                 world. You can host your home, activity, or do both. When you host is up to you.<br>
                 <a href="https://www.airbnb.com/host/experiences?from_homehost=1" target="_blank"> Learn more about
@@ -214,12 +240,17 @@
             </ul>
             <table>
                 <tr>
+                    <th>
+                        <h3>More about hosting</h3>
+                    </th>
+                </tr>
+                <tr>
                     <td>
                         <figure>
                             <img src="https://github.com/maddie-moe/Practice/blob/master/More-about-hosting-Setup_Airbnb.jpg?raw=true"
                                 alt="" width="265">
                             <figcaption>
-                                <h4>Setup</h4>
+                                <h5>Setup</h5>
                                 How to start hosting<br>
                                 <a href="https://www.airbnb.com/d/setup" target="_blank">Learn more</a>
                             </figcaption>
@@ -230,7 +261,7 @@
                             <img src="https://github.com/maddie-moe/Practice/blob/master/More-about-hosting-Safety_Airbnb.jpg?raw=true"
                                 alt="" width="265">
                             <figcaption>
-                                <h4>Safety</h4>
+                                <h5>Safety</h5>
                                 How Airbnb protects hosts<br>
                                 <a href="https://www.airbnb.com/d/safety" target="_blank">Learn more</a>
                             </figcaption>
@@ -241,7 +272,7 @@
                             <img src="https://github.com/maddie-moe/Practice/blob/master/More-about-hosting-Financials_Airbnb.jpg?raw=true"
                                 alt="" width="265">
                             <figcaption>
-                                <h4>Financials</h4>
+                                <h5>Financials</h5>
                                 How you make money on Airbnb<br>
                                 <a href="https://www.airbnb.com/d/financials" target="_blank">Learn more</a>
                             </figcaption>
@@ -257,10 +288,18 @@
     <footer>
         <table>
             <tr>
-                <th scope="col">ABOUT</th>
-                <th scope="col">COMMUNITY</th>
-                <th scope="col">HOST</th>
-                <th scope="col">SUPPORT</th>
+                <th scope="col">
+                    <h5>ABOUT</h5>
+                </th>
+                <th scope="col">
+                    <h5>COMMUNITY</h5>
+                </th>
+                <th scope="col">
+                    <h5>HOST</h5>
+                </th>
+                <th scope="col">
+                    <h5>SUPPORT</h5>
+                </th>
             </tr>
             <tr>
                 <td><a href="https://www.airbnb.com/d/howairbnbworks" target="_blank">How Airbnb works</a></td>
@@ -293,19 +332,33 @@
                 <td><a href="https://www.hoteltonight.com/?utm_source_name=Airbnb&utm_campaign_name=Dr_Us_Desktop_Airbnb_Footer"
                         target="_blank">HotelTonight</a></td>
                 <td><a href="https://www.airbnb.com/d/covid19relief" target="_blank">Frontline Stays</a></td>
-                <td><a href="https://www.airbnb.com/openhomes?from_footer=1"
-                        target="_blank">Open Homes</a></td>
+                <td><a href="https://www.airbnb.com/resources/hosting-homes" target="_blank">Resource Center</a></td>
                 <td><a href="https://www.airbnb.com/trust" target="_blank">Trust & Safety</a></td>
             </tr>
             <tr>
-                <td><a href="https://www.airbnb.com/work?s=footer"
-                        target="_blank">Airbnb for Work</a></td>
-                <td><a href="https://www.airbnb.com/invite?r=6" target="_blank">Invite Friends</a></td>
-                <td><a href="https://www.airbnb.com/resources/hosting-homes"
-                        target="_blank">Resources</a></td>
+                <td><a href="https://www.airbnb.com/work?s=footer" target="_blank">Airbnb for Work</a></td>
+                <td><a href="https://www.airbnb.com/invite?r=6" target="_blank">Invite friends</a></td>
+                <td><a href="https://community.withairbnb.com/t5/Community-Center/ct-p/community-center"
+                        target="_blank">Community Center</a></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.airbnb.com/d/olympics" target="_blank">Olympics</a></td>
+                <td><a href="https://www.airbnb.com/d/gift-cards" target="_blank">Gift cards</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><a href="https://careers.airbnb.com/" target="_blank">Careers</a></td>
+                <td><a href="https://www.airbnb.org/?locale=en" target="_blank">Airbnb.org</a></td>
+                <td></td>
                 <td></td>
             </tr>
         </table>
+        <hr>
+        <p>© 2020 Airbnb, Inc. All rights reserved · <a href="https://www.airbnb.com/help/article/2855/privacy-policy"
+                target="_blank">Privacy</a> · <a href="https://www.airbnb.com/help/article/2908/terms-of-service"
+                target="_blank">Terms</a> · <a href="https://www.airbnb.com/sitemaps/v2" target="_blank">Sitemap</a></p>
     </footer>
 </body>
 
