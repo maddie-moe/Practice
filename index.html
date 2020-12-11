@@ -9,9 +9,11 @@
     <script type="text/javascript" src="togglePopup.js"></script>
 </head>
 
+<!-- Notes: A) Use divs to section off content for styling. B) Define sizes and buttons in CSS.
+    C) Use HTML tables to establish columns, and adjust CSS for different devices. -->
+
 <body>
     <nav>
-        <!--I know you're not supposed to set image size/width in HTML, but I did for this practice page b/c the images were huge, and made previewing the page in the browser difficult.-->
         <a href="https://www.airbnb.com/" target="_blank"><img
                 src="https://github.com/maddie-moe/Practice/blob/master/Logo_Airbnb.png?raw=true" alt="Airbnb logo"
                 width="30" /></a>
@@ -26,33 +28,11 @@
     <header>
         <img src="https://github.com/maddie-moe/Practice/blob/master/IMG/Header-image_Airbnb.jpg?raw=true"
             alt="A two story tree house made of wood" width="800">
-        <!--Form does not submit anywhere. Not sure how to designate where info is sent.-->
+        <!--Form does not submit anywhere.-->
         <form action="submission.html" method="POST">
             <section>
                 <h2>Earn up to $2,548 a month hosting in Phoenix</h2>
                 <aside onclick="togglePopup()"><u>How we estimate your earnings potential</u></aside>
-                <!--The following div is the only popup I created for this page. Not sure how to properly
-                    integrate popup copy into the doc, without hindering the readability of the code.-->
-                <div class="popup" id="popup-1">
-                    <div class="overlay"></div>
-                    <div class="content">
-                        <div class="close-btn" onclick="togglePopup()">&times;</div>
-                        <h3>How we estimate your earning potential</h3>
-                        <p>The default earnings estimates we display are for entire home listings with a guest capacity
-                            of four. Estimates are based on booking data from the last two years for your area and are
-                            calculated by multiplying a nightly price by days of occupancy (occupancy rate). The nightly
-                            prices used are based on average prices (before expenses, fees and taxes). The occupancy
-                            rates used to calculate monthly and annual estimates are based on the top 50% of listings as
-                            measured by how often they are booked. The top half of listings is used to illustrate the
-                            earning potential for engaged hosts. For the monthly and annual estimates only listings with
-                            sufficient availability are considered. Weekly estimates use 7 nights of occupancy. Where
-                            you provide information about your potential listing, the estimate we provide reflects that
-                            information. Amounts are estimates and not guaranteed. How much you actually make will
-                            depend on your availability, price, listing characteristics and amenities, acceptance and
-                            cancellation rates, guest reviews, applicable legal restrictions, demand in your area, and
-                            other factors.</p>
-                    </div>
-                </div>
                 <p>Tell us more about your place and we'll update your estimate</p>
             </section>
             <section>
@@ -355,6 +335,29 @@
                 target="_blank">Privacy</a> · <a href="https://www.airbnb.com/help/article/2908/terms-of-service"
                 target="_blank">Terms</a> · <a href="https://www.airbnb.com/sitemaps/v2" target="_blank">Sitemap</a></p>
     </footer>
+
+    <!-- Pop-up code/content below -->
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h3>How we estimate your earning potential</h3>
+            <p>The default earnings estimates we display are for entire home listings with a guest capacity
+                of four. Estimates are based on booking data from the last two years for your area and are
+                calculated by multiplying a nightly price by days of occupancy (occupancy rate). The nightly
+                prices used are based on average prices (before expenses, fees and taxes). The occupancy
+                rates used to calculate monthly and annual estimates are based on the top 50% of listings as
+                measured by how often they are booked. The top half of listings is used to illustrate the
+                earning potential for engaged hosts. For the monthly and annual estimates only listings with
+                sufficient availability are considered. Weekly estimates use 7 nights of occupancy. Where
+                you provide information about your potential listing, the estimate we provide reflects that
+                information. Amounts are estimates and not guaranteed. How much you actually make will
+                depend on your availability, price, listing characteristics and amenities, acceptance and
+                cancellation rates, guest reviews, applicable legal restrictions, demand in your area, and
+                other factors.</p>
+        </div>
+    </div>
+
 </body>
 
 </html>
